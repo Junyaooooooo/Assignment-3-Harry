@@ -1,0 +1,316 @@
+/* global */
+body {
+    width:100%;
+    background: #FFF;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+/* for main */
+.starting-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between; /* set space-between to push each element to each side */
+    align-items: center;
+    background-color: #fff;
+    padding: 0 40px; /* setting padding for left/right side 40px */
+    z-index: 102;
+}
+
+.header-menu {
+    align-items: baseline; /* Center the content */
+    justify-content: center; /* Center the content vertically */
+    text-transform: uppercase;
+    font-size: 18px; /* Match the font size of .page-name */
+    font-weight: 600; /* Match the font weight of .page-name */
+    line-height: 60px; /* Match the line height of .page-name */
+    text-align: center; /* Center the text horizontally */
+}
+
+.header-menu:hover {
+    color: #656B4E;
+}
+
+.header-logo {
+    align-items: end;
+    padding-top: 20.36px;
+    width: auto;
+    height: 40px;
+    /* 以防万一我要改 */
+    padding-right: 80px;
+}
+
+/* header mini-interaction here */
+
+.starting-animation {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Adjust the height as needed */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+}
+
+.starting-container {
+    width: 600px; /* Adjust width as needed */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%; /* Adjust this value to move the container up or down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Make sure it's above the forest image */
+}
+
+.starting-main {
+    width: 600px;
+    height: auto;
+}
+
+h1 {
+    width: 595px;
+    color: #000;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin-top: 260px;
+    z-index: 3;
+}
+
+.moving-forest {
+    opacity: 0.7;
+    position: absolute; /* position it at the bottom */
+    bottom: 0;
+    width: 100%; /* let it span the full width of the container */
+    z-index: 1; /* below the text */
+    display: flex;
+    justify-content: space-between; /* place forest img in two sides of page */
+}
+
+.forest-left,
+.forest-right {
+    width: 50%;
+    flex: 1; /* each forest weighs 50% of page */
+    height: auto; /* maintain aspect ratio */
+}
+
+/* main-menu here */
+.menu-wrapper {
+    position: fixed;
+    visibility: hidden;
+    top:60px;
+    left:0;
+    padding-top: 60px;
+    width: 100%;
+    height: 100%;
+    background-color: #EBEBEB;
+    z-index:101;
+}
+
+.menu-wrapper ul {
+    display: flex; 
+    flex-direction: column; 
+    gap: 80px; 
+    padding: 0; 
+    margin: 0;
+    justify-content: center; 
+    align-items: center;
+    list-style-type: none; 
+}
+
+.menu-item {
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 60px; /* 200% */
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+.menu-item:hover {
+    color:#A84B15;
+}
+
+
+/* media selection here */
+.media-selection {
+    position: sticky;
+    top: 60px;
+    z-index: 99;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    list-style-type: none;
+    overflow-x: auto;
+    padding: 30px 0;
+}
+
+.media-selection ul {
+    display: flex; 
+    flex-direction: row; 
+    gap: 100px; 
+    padding: 0; 
+    margin: 0;
+    justify-content: center; 
+    align-items: center;
+    list-style-type: none; 
+}
+
+/* btn style: clicked */
+.mb-wrapper,
+.mb-on {
+    width: 177.554px;
+    height: 58.324px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../title/harry‘s work/main-button-clicked.png'); /* Use the image as background */
+    background-size: cover; /* Cover the entire area of the wrapper */
+    text-align: center; /* Ensure text is centered horizontally */
+}
+
+.mb-wrapper,
+.mb-off {
+    width: 177.554px;
+    height: 58.324px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../title/harry‘s work/main-button.png'); /* Use the image as background */
+    background-size: cover; /* Cover the entire area of the wrapper */
+    text-align: center; /* Ensure text is centered horizontally */
+}
+
+.media-name {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0; /* Remove any default margin */
+}
+
+.mb-wrapper:hover {
+    transform: translate(5px, 5px);; 
+}
+
+/* main content here(responsive img display) */
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* This will create exactly four columns */
+    gap: 10px; /* This acts as the gutter between items */
+    padding: 0 40px 60px 40px; /* This acts as padding around the grid */
+}
+
+.image-container img {
+    width: 100%; /* This will make the image take the full width of the grid column */
+    height: auto; /* This will maintain the aspect ratio of the images */
+    margin-bottom: 10px; /* This adds a gap below each image */
+}
+
+/* footer here */
+footer {
+    width: 100%;
+    height: 30%;
+    background: #000;
+    display: flex;
+    flex-direction: column;   
+    align-items: center; /* Center footer content horizontally */
+    justify-content: center; /* Center footer content vertically */
+    padding-top: 50px; /* Add some padding top and bottom */
+    padding-bottom: 20px;
+}
+
+.footer-top {
+    width: 100%; /* Full width to accommodate the content */
+    display: flex;
+    justify-content: space-between; /* This will push the logo to the right */
+    flex-direction: column;
+    align-items: center; /* Align items vertically */
+    margin-bottom: 20px; /* Add some space between the logo and the links */
+}
+
+.footer-logo,
+.web-name {
+    margin-left: auto;
+    padding-right: 40px;
+}
+
+.footer-logo {
+    height: auto; /* Maintain aspect ratio */
+}
+
+.web-name {
+    color: #FFF;
+    opacity: 0.6;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.reference-list {
+    display: flex; /* Display list items in a row */
+    justify-content: center; /* Center list items horizontally */
+    align-items: center; /* Center list items vertically */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Full width */
+}
+
+.footer-link {
+    list-style-type: none; /* Remove list bullet points */
+    display: flex;
+    justify-content: center; /* Center the links */
+    align-items: center;
+    gap: 120px; /* Adjust gap between links */
+    padding: 0; /* Remove default padding */
+}
+
+.footer-item {
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Adjust size as necessary */
+    font-weight: 600; /* Adjust weight as necessary */
+    text-transform: uppercase; /* Capitalize text */
+    padding: 3 1rem; /* Add horizontal padding if needed */
+}
+
+.footer-item:hover {
+    color: #656B4E;
+}
+
+/* Remove the absolute positioning for copyright to flow naturally */
+.copyright {
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Push it to the bottom */
+    padding-top: 80px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
